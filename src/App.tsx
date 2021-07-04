@@ -72,8 +72,8 @@ function App() {
       )}
       {todos
         .filter((todo) => !todo.finished)
-        .map((todo, i) => (
-          <div key={todo.text + i}>
+        .map((todo) => (
+          <div key={todo.id}>
             <TodoEntry
               text={todo.text}
               finished={todo.finished}
@@ -84,8 +84,8 @@ function App() {
         ))}
       {todos
         .filter((todo) => todo.finished)
-        .map((todo, i) => (
-          <div key={todo.text + i}>
+        .map((todo) => (
+          <div key={todo.id}>
             <TodoEntry
               text={todo.text}
               finished={todo.finished}
