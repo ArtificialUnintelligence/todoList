@@ -4,7 +4,7 @@ interface Props {
   text: string;
   finished: boolean;
   id: number;
-  handleChecked: (index: number, status: boolean) => void;
+  handleChecked: (index: number) => void;
 }
 
 export const TodoEntry: React.FC<Props> = ({
@@ -37,7 +37,7 @@ export const TodoEntry: React.FC<Props> = ({
         style={{
           marginLeft: "auto",
         }}
-        onChange={(e) => handleChecked(id, e.target.checked)}
+        onChange={(e) => handleChecked(id)}
         checked={finished}
       ></input>
     </div>

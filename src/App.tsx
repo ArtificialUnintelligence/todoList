@@ -44,9 +44,10 @@ function App() {
       : setTodos(newTodos.sort(sortByID));
   }
 
-  function handleChecked(id: number, status: boolean) {
+  function handleChecked(id: number) {
     const newTodos = [...todos];
-    newTodos[id - 1].finished = status;
+    const { finished } = newTodos[id - 1];
+    newTodos[id - 1].finished = !finished;
     setTodos(newTodos);
   }
 
